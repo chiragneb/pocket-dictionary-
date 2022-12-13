@@ -5,7 +5,7 @@ const App = () => {
   const [word, setWord] = useState();
   const [mean, setMean] = useState([]);
   const [main, setMain] = useState([]);
-  const [audio, setAudio] = useState();
+  
   
   const dataApi = async () => {
     const data = await fetch(
@@ -16,8 +16,6 @@ const App = () => {
     console.log(dataJ);
     setMain(dataJ[0]);
     console.log(dataJ[0]);
-    const url = dataJ[0].phonetics[0].audio;
-    setAudio(url);
   };
 
 
@@ -46,10 +44,12 @@ const App = () => {
               id="floatingInput"
               value={word}
               onChange={(e) => setWord(e.target.value)}
-            />
+
+             />
             <button
               className="btn btn-dark text-light col-md-1 col-sm-2 mx-2"
               onClick={Search}
+              
             >
               Search
             </button>
@@ -58,7 +58,7 @@ const App = () => {
       </div>
 
       {word === "" ? (
-        <Definition mean={mean} main={main} audio={audio} />
+        <Definition mean={mean} main={main} />
       ) : (
         <div className="fs-1 text-capitalize text-center fw-bold text-decoration-underline text-white bg-dark extra">
           type a word in the box
