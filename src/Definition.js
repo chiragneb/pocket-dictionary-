@@ -2,7 +2,7 @@ import React from 'react';
 import Select from "./Select.js";
 
 
-const Defination = ({ mean, main, audio }) => {
+const Definition = ({ mean, main, audio }) => {
     return (
         <>
         <div className="container-fluid">
@@ -33,5 +33,5 @@ const Defination = ({ mean, main, audio }) => {
     );
 };
 
-export default Defination;
+export default Definition;
 

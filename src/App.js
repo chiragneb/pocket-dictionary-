@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Defination from "./Defination";
+import Definition from "./Definition";
 
 const App = () => {
   const [word, setWord] = useState();
@@ -36,7 +36,7 @@ const App = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 text-center fw-bold fs-1 p-3 bg-primary text-white">
-            Pocket Dictonary
+            POCKET DICTIONARY 📕
           </div>
           <div className="form-floating bg-primary py-3 pb-5 d-flex justify-content-center">
             <input
@@ -58,7 +58,7 @@ const App = () => {
       </div>
 
       {word === "" ? (
-        <Defination mean={mean} main={main} audio={audio} />
+        <Definition mean={mean} main={main} audio={audio} />
       ) : (
         <div className="fs-1 text-capitalize text-center fw-bold text-decoration-underline text-white bg-dark extra">
           type a word in the box
@@ -72,4 +72,3 @@ export default App;
 
 
 
-<div class="open_grepper_editor wp-dark-mode-ignore" title="Edit & Save To Grepper"></div>
